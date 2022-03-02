@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+input{
+    color: red;
+    text-align: center;
+    line-height: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h1,h2{
+    color: red;
+    font-size: x-large;
+}
+
+#calculette{
+    background-color: gray;
+    height: 200px;
+}
