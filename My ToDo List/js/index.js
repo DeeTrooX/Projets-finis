@@ -54,29 +54,7 @@ add.addEventListener('click', newTask)
         }
 })
 
-// On gère l'importation de tâches
-load.addEventListener('click', () => {
-    fetch(url.value)
-    .then(response => {
-        if (response.ok){
-            return response.json()
-        }
-        throw new Error(`${response.statusText} (${res.statusText})`)
-    })
-    .then(tasks => {
-        if (Array.isArray(tasks)) {
-            tasks.forEach(task => {
-                if (storage.list.indexOf(task) === -1 && taskToDOM(task)) {
-                    storage.set(task)
-                }
-                return
-            })
-        }
-        throw new TypeError(`La réponse n'est pas un tableau JSON (type: ${typeOf}`)
-    })
-})
-
 function myFunction() {
-    var element = document.getElementById("myDIV");
+    let element = document.getElementById("myDIV");
     element.classList.toggle("mystyle");
  }
