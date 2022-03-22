@@ -54,7 +54,6 @@ add.addEventListener('click', newTask)
         }
 })
 
-function myFunction() {
-    let element = document.getElementById("myDIV");
-    element.classList.toggle("mystyle");
- }
+list.addEventListener('click',(e) => {
+    e.target.classList.toggle('mystyle')
+ })
