@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>ToDo List</h1>
-        <div class="actions">
-            <input id="input" type="text" placeholder="Nouvelle tâche...">
-            <button id="add">ADD</button>
-            <button id="clear">CLEAR</button>
-            <input id="url" type="text" placeholder="Un tableau au format JSON">
-            <button id="load">LOAD</button>
-        </div>
+    <header>
+        <h1>My ToDo List</h1>
+    <div class="actions">
+        <input id="input" type="text" placeholder="Nouvelle tâche...">
+        <button id="add">ADD</button>
+    </div>
+    </header>
+    <div onclick="myFunction()" id="myDIV">
         <ul id="list"></ul>
     </div>
 </body>

@@ -4,9 +4,6 @@
 const list = document.getElementById('list')
 const input = document.getElementById('input')
 const add = document.getElementById('add')
-const clear = document.getElementById('clear')
-const url = document.getElementById('url')
-const load = document.getElementById('load')
 
 // Nouvelle instance pour la clé 'tasks'
 const storage = new ArrayStorage('tasks')
@@ -22,7 +19,7 @@ function taskToDOM(task) {
         const remove = document.createElement('button')
        
         li.textContent = task
-        remove.textContent = 'REMOVE'
+        remove.textContent = 'X'
 
         remove.addEventListener('click', () => {
             const value = remove.parentNode.firstChild.textContent
@@ -39,9 +36,6 @@ function taskToDOM(task) {
     return false
 }
 // On ajoute chaque tâche à la liste à puces
-// for (let i=0; i < tasks.length; i++) {
-//  taskToDOM(tasks[i])
-// } == 
 tasks.forEach(task => taskToDOM(task))
 
 // On gère l'ajout de tâches avec le bouton ADD et la touche 'Enter'
@@ -58,12 +52,6 @@ add.addEventListener('click', newTask)
         if (e.key === 'Enter'){
             newTask()
         }
-})
-
-// On supprime la liste du DOM et du navigateur
-clear.addEventListener('click', () => {
-    storage.clear()
-    list.innerHTML=''
 })
 
 // On gère l'importation de tâches
@@ -87,3 +75,8 @@ load.addEventListener('click', () => {
         throw new TypeError(`La réponse n'est pas un tableau JSON (type: ${typeOf}`)
     })
 })
+
+function myFunction() {
+    var element = document.getElementById("myDIV");
+    element.classList.toggle("mystyle");
+ }
